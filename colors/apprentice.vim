@@ -37,7 +37,7 @@ let g:colors_name = 'apprentice'
 
 if ($TERM =~# '256' || &t_Co >= 256) || has('gui_running')
   hi Normal           ctermbg=235  ctermfg=250  guibg=#262626 guifg=#bcbcbc cterm=NONE           gui=NONE
-  hi LineNr           ctermbg=234  ctermfg=242  guibg=#222222 guifg=#444444 cterm=NONE           gui=NONE
+  hi LineNr           ctermbg=234  ctermfg=242  guibg=#262626 guifg=#444444 cterm=NONE           gui=NONE
   hi FoldColumn       ctermbg=234  ctermfg=242  guibg=#1c1c1c guifg=#6c6c6c cterm=NONE           gui=NONE
   hi Folded           ctermbg=234  ctermfg=242  guibg=#1c1c1c guifg=#6c6c6c cterm=NONE           gui=NONE
   hi MatchParen       ctermbg=234  ctermfg=229  guibg=NONE    guifg=#ff8700 cterm=NONE           gui=underline
@@ -78,7 +78,7 @@ if ($TERM =~# '256' || &t_Co >= 256) || has('gui_running')
 
   hi Cursor           ctermbg=242  ctermfg=NONE guibg=#6c6c6c guifg=NONE    cterm=NONE           gui=NONE
   hi CursorColumn     ctermbg=236  ctermfg=NONE guibg=#303030 guifg=NONE    cterm=NONE           gui=NONE
-  hi CursorLineNr     ctermbg=236  ctermfg=73   guibg=#303030 guifg=#5fafaf cterm=NONE           gui=NONE
+  hi CursorLineNr     ctermbg=236  ctermfg=73   guibg=#303030 guifg=#6c6c6c cterm=NONE           gui=NONE
   hi CursorLine       ctermbg=234  ctermfg=NONE guibg=#1c1c1c guifg=NONE    cterm=NONE           gui=NONE
 
   hi helpLeadBlank    ctermbg=NONE ctermfg=NONE guibg=NONE    guifg=NONE    cterm=NONE           gui=NONE
