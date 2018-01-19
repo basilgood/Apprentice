@@ -134,7 +134,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
   set background=dark
 
   hi Comment          ctermbg=NONE        ctermfg=gray        cterm=NONE
-  hi Conceal          ctermbg=NONE        ctermfg=white       cterm=NONE
+  hi Conceal          ctermbg=NONE        ctermfg=gray         cterm=NONE
   hi Constant         ctermbg=NONE        ctermfg=red         cterm=NONE
   hi Function         ctermbg=NONE        ctermfg=yellow      cterm=NONE
   hi Identifier       ctermbg=NONE        ctermfg=darkblue    cterm=NONE
@@ -218,6 +218,7 @@ endif
 
 hi link Boolean                  Constant
 hi link Character                Constant
+hi link Conceal                  Normal
 hi link Conditional              Statement
 hi link Debug                    Special
 hi link Define                   PreProc
