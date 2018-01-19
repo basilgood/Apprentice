@@ -29,13 +29,13 @@
 
 hi clear
 
-if exists("syntax_on")
+if exists('syntax_on')
   syntax reset
 endif
 
-let colors_name = "apprentice"
+let g:colors_name = 'apprentice'
 
-if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
+if ($TERM =~# '256' || &t_Co >= 256) || has('gui_running')
   hi Normal           ctermbg=235  ctermfg=250  guibg=#262626 guifg=#bcbcbc cterm=NONE           gui=NONE
   hi LineNr           ctermbg=234  ctermfg=242  guibg=#1c1c1c guifg=#6c6c6c cterm=NONE           gui=NONE
   hi FoldColumn       ctermbg=234  ctermfg=242  guibg=#1c1c1c guifg=#6c6c6c cterm=NONE           gui=NONE
@@ -113,7 +113,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
   hi debugPC          ctermbg=67                guibg=#5f87af
   hi debugBreakpoint  ctermbg=131               guibg=#af5f5f
 
-  if has("gui_running")
+  if has('gui_running')
     hi SpellBad       ctermbg=NONE ctermfg=131  guibg=NONE    guifg=NONE    cterm=undercurl      gui=undercurl guisp=#af5f5f
     hi SpellCap       ctermbg=NONE ctermfg=73   guibg=NONE    guifg=NONE    cterm=undercurl      gui=undercurl guisp=#5fafaf
     hi SpellLocal     ctermbg=NONE ctermfg=65   guibg=NONE    guifg=NONE    cterm=undercurl      gui=undercurl guisp=#5f875f
