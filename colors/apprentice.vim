@@ -16,18 +16,18 @@ let g:colors_name = 'apprentice'
 let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 1
 
 if (has('termguicolors') && &termguicolors) || has('gui_running')
-  let g:terminal_ansi_colors = ['#1c1c1c', '#af5f5f', '#5f875f', '#87875f', '#5f87af', '#5f5f87', '#5f8787', '#6c6c6c', '#444444', '#ff8700', '#87af87', '#ffffaf', '#87afd7', '#8787af', '#5fafaf', '#ffffff']
+  let g:terminal_ansi_colors = ['#1c1c1c', '#af5f5f', '#5f875f', '#87875f', '#5f87af', '#5f5f87', '#5f8787', '#5c5c5c', '#444444', '#ff8700', '#87af87', '#ffffaf', '#87afd7', '#8787af', '#5fafaf', '#ffffff']
 endif
 hi Normal guifg=#bcbcbc guibg=#262626 gui=NONE cterm=NONE
 hi CursorLineNr guifg=NONE guibg=#303030 gui=NONE cterm=NONE
 hi CursorLine guifg=NONE guibg=#303030 gui=NONE cterm=NONE
 hi NonText guifg=#585858 guibg=NONE gui=NONE cterm=NONE
 hi EndOfBuffer guifg=#585858 guibg=NONE gui=NONE cterm=NONE
-hi LineNr guifg=#6c6c6c guibg=#1c1c1c gui=NONE cterm=NONE
-hi FoldColumn guifg=#6c6c6c guibg=#1c1c1c gui=NONE cterm=NONE
-hi Folded guifg=#6c6c6c guibg=#1c1c1c gui=NONE cterm=NONE
+hi LineNr guifg=#5c5c5c guibg=#1c1c1c gui=NONE cterm=NONE
+hi FoldColumn guifg=#5c5c5c guibg=#1c1c1c gui=NONE cterm=NONE
+hi Folded guifg=#5c5c5c guibg=#1c1c1c gui=NONE cterm=NONE
 hi MatchParen guifg=#ffffaf guibg=#1c1c1c gui=NONE cterm=NONE
-hi SignColumn guifg=#6c6c6c guibg=#1c1c1c gui=NONE cterm=NONE
+hi SignColumn guifg=#5c5c5c guibg=#1c1c1c gui=NONE cterm=NONE
 hi Pmenu guifg=#bcbcbc guibg=#444444 gui=NONE cterm=NONE
 hi PmenuSbar guifg=NONE guibg=#585858 gui=NONE cterm=NONE
 hi PmenuSel guifg=#262626 guibg=#5f8787 gui=NONE cterm=NONE
@@ -48,14 +48,14 @@ hi StatusLine guifg=#262626 guibg=#87875f gui=NONE cterm=NONE
 hi StatusLineNC guifg=#87875f guibg=#444444 gui=NONE cterm=NONE
 hi StatusLineTerm guifg=#262626 guibg=#87875f gui=NONE cterm=NONE
 hi StatusLineTermNC guifg=#87875f guibg=#444444 gui=NONE cterm=NONE
-hi Visual guifg=#87afd7 guibg=#262626 gui=reverse cterm=reverse
+hi Visual guifg=NONE guibg=#3f3f2c gui=NONE cterm=NONE
 hi VisualNOS guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
 hi VertSplit guifg=#444444 guibg=#444444 gui=NONE cterm=NONE
 hi WildMenu guifg=#262626 guibg=#87afd7 gui=NONE cterm=NONE
-hi DiffAdd guifg=#87afff guibg=#303030 gui=reverse cterm=reverse
-hi DiffChange guifg=#dfdfdf guibg=#303030 gui=reverse cterm=reverse
-hi DiffDelete guifg=#ffdf87 guibg=#303030 gui=reverse cterm=reverse
-hi DiffText guifg=#afafaf guibg=#303030 gui=reverse cterm=reverse
+hi DiffAdd guifg=NONE guibg=#303030 gui=NONE cterm=NONE
+hi DiffChange guifg=#dfdfdf guibg=#303030 gui=NONE cterm=NONE
+hi DiffDelete guifg=#af5f5f guibg=#303030 gui=NONE cterm=NONE
+hi DiffText guifg=NONE guibg=#4b3b5b gui=NONE cterm=NONE
 hi IncSearch guifg=#262626 guibg=#af5f5f gui=NONE cterm=NONE
 hi Search guifg=#262626 guibg=#ffffaf gui=NONE cterm=NONE
 hi Directory guifg=#5fafaf guibg=NONE gui=NONE cterm=NONE
@@ -69,7 +69,7 @@ hi ColorColumn guifg=NONE guibg=#1c1c1c gui=NONE cterm=NONE
 hi! link Terminal Normal
 hi! link CursorIM Cursor
 hi! link QuickFixLine Search
-hi Comment guifg=#6c6c6c guibg=NONE gui=NONE cterm=NONE
+hi Comment guifg=#5c5c5c guibg=NONE gui=NONE cterm=NONE
 hi Conceal guifg=#bcbcbc guibg=NONE gui=NONE cterm=NONE
 hi Constant guifg=#ff8700 guibg=NONE gui=NONE cterm=NONE
 hi Error guifg=#af5f5f guibg=NONE gui=reverse cterm=reverse
@@ -124,6 +124,12 @@ hi! link xmlTagName Statement
 hi! link xmlEndTag Statement
 hi! link markdownItalic Preproc
 hi! link asciidocQuotedEmphasized Preproc
+hi! GitGutterAdd guifg=#4d7762 guibg=#1c1c1c
+hi! GitGutterDelete guifg=#9b6681 guibg=#1c1c1c
+hi! GitGutterChange guifg=#3f5096 guibg=#1c1c1c
+hi! ALEErrorSign guifg=#9b6681 guibg=#1c1c1c
+hi! ALEWarningSign guifg=#4d7762 guibg=#1c1c1c
+hi! ALEInfoSign guifg=#3f5096 guibg=#1c1c1c
 
 if s:t_Co >= 256
   hi Normal ctermfg=250 ctermbg=235 cterm=NONE
@@ -156,14 +162,14 @@ if s:t_Co >= 256
   hi StatusLineNC ctermfg=101 ctermbg=238 cterm=NONE
   hi StatusLineTerm ctermfg=235 ctermbg=101 cterm=NONE
   hi StatusLineTermNC ctermfg=101 ctermbg=238 cterm=NONE
-  hi Visual ctermfg=110 ctermbg=235 cterm=reverse
+  hi Visual ctermfg=NONE ctermbg=235 cterm=NONE
   hi VisualNOS ctermfg=NONE ctermbg=NONE cterm=underline
   hi VertSplit ctermfg=238 ctermbg=238 cterm=NONE
   hi WildMenu ctermfg=235 ctermbg=110 cterm=NONE
-  hi DiffAdd ctermfg=111 ctermbg=236 cterm=reverse
-  hi DiffChange ctermfg=188 ctermbg=236 cterm=reverse
-  hi DiffDelete ctermfg=222 ctermbg=236 cterm=reverse
-  hi DiffText ctermfg=145 ctermbg=236 cterm=reverse
+  hi DiffAdd ctermfg=111 ctermbg=236 cterm=NONE
+  hi DiffChange ctermfg=188 ctermbg=236 cterm=NONE
+  hi DiffDelete ctermfg=222 ctermbg=236 cterm=NONE
+  hi DiffText ctermfg=NONE ctermbg=236 cterm=NONE
   hi IncSearch ctermfg=235 ctermbg=131 cterm=NONE
   hi Search ctermfg=235 ctermbg=229 cterm=NONE
   hi Directory ctermfg=73 ctermbg=NONE cterm=NONE
@@ -274,7 +280,7 @@ if s:t_Co >= 16
   hi DiffAdd ctermfg=cyan ctermbg=darkgrey cterm=reverse
   hi DiffChange ctermfg=lightgrey ctermbg=darkgrey cterm=reverse
   hi DiffDelete ctermfg=yellow ctermbg=darkgrey cterm=reverse
-  hi DiffText ctermfg=darkgrey ctermbg=darkgrey cterm=reverse
+  hi DiffText ctermfg=NONE ctermbg=darkgrey cterm=reverse
   hi IncSearch ctermfg=black ctermbg=darkred cterm=NONE
   hi Search ctermfg=black ctermbg=yellow cterm=NONE
   hi Directory ctermfg=cyan ctermbg=NONE cterm=NONE
@@ -358,7 +364,7 @@ if s:t_Co >= 0
   hi DiffAdd term=reverse
   hi DiffChange term=NONE
   hi DiffDelete term=reverse
-  hi DiffText term=reverse
+  hi DiffText term=NONE
   hi Directory term=NONE
   hi EndOfBuffer term=NONE
   hi ErrorMsg term=bold,reverse
@@ -418,7 +424,7 @@ endif
 " Color: dark_grey     #303030           236               darkgrey
 " Color: grey          #444444           238               darkgrey
 " Color: medium_grey   #585858           240               darkgrey
-" Color: light_grey    #6c6c6c           242               lightgrey
+" Color: light_grey    #5c5c5c           242               lightgrey
 " Color: lighter_grey  #bcbcbc           250               lightgrey
 " Color: white         #ffffff           231               white
 " Color: purple        #5f5f87           60                darkmagenta
